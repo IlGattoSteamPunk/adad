@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stolen IP Address</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Stolen IP Address:</h1>
+    <p id="ip-address"></p>
+
+    <script>
+        $(document).ready(function() {
+            // Replace 'https://www.example.com/api' with the actual API endpoint where the stolen IP is sent
+            var apiUrl = 'https://www.example.com/api';
+
+            $.get(apiUrl, function(data) {
+                $('#ip-address').text(data.ip);
+            });
+        });
+    </script>
+</body>
+</html>
